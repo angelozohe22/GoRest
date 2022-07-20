@@ -196,7 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				4C10209F2887FD4A002F6186 /* Request */,
-				4C1020932887E1AF002F6186 /* response */,
+				4C1020932887E1AF002F6186 /* Response */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -236,12 +236,12 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
-		4C1020932887E1AF002F6186 /* response */ = {
+		4C1020932887E1AF002F6186 /* Response */ = {
 			isa = PBXGroup;
 			children = (
 				4C10208B28879FD6002F6186 /* PostResponse.swift */,
 			);
-			path = response;
+			path = Response;
 			sourceTree = "<group>";
 		};
 		4C1020942887F5F9002F6186 /* NetworkManager */ = {

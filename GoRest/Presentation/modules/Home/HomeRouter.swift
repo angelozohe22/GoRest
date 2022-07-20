@@ -5,11 +5,15 @@
 //  Created by Luis Angel Inga Mendoza on 19/07/22.
 //
 
-import Foundation
+import UIKit
 
 class HomeRouter {
     
-    var presenter: HomePresenterProtocol?
+    weak var currentViewController: UIViewController?
+    
+    init(withView view: UIViewController) {
+        self.currentViewController = view
+    }
     
 }
 

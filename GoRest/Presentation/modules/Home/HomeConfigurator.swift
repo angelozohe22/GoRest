@@ -11,10 +11,10 @@ import UIKit
 class HomeConfigurator {
     
     class func make() -> UIViewController {
-        let view = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+        let view = UIStoryboard.init(name: "Main", bundle: Bundle(for: HomeViewController.self)).instantiateViewController(withIdentifier: HomeViewController.identifier) as! HomeViewController
         
         let presenter   = HomePresenter()
-        let router      = HomeRouter()
+        let router      = HomeRouter(withView: view)
         let interactor  = HomeInteractor()
         
         presenter.view       = view
@@ -22,8 +22,6 @@ class HomeConfigurator {
         presenter.interactor = interactor
         
         view.presenter       = presenter
-        
-        router.presenter     = presenter
         
         interactor.output    = presenter
         

@@ -12,14 +12,14 @@ enum Images {
     case errorData
     case emptyData
     
-    var image: UIImage {
+    var image: UIImage? {
         return value
     }
     
-    private var value: UIImage {
+    private var value: UIImage? {
         switch self {
-        case .errorData: return UIImage(named: "error_data")!
-        case .emptyData: return UIImage(named: "empty_data")!
+        case .errorData: return UIImage(named: "error_data")
+        case .emptyData: return UIImage(named: "empty_data")
         }
     }
     

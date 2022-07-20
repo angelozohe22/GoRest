@@ -9,6 +9,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    static let identifier = "HomeVC"
+    
     @IBOutlet weak var cardViewContainer: CardView!
     
     @IBOutlet weak var idtLoading: UIActivityIndicatorView!
@@ -40,7 +42,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "DataTableViewCell", bundle: nil), forCellReuseIdentifier: "DataTVC")
+        tableView.register(UINib(nibName: "DataTableViewCell", bundle: Bundle(for: DataTableViewCell.self)), forCellReuseIdentifier: DataTableViewCell.identifier)
         tableView.dataSource = self
         tableView.delegate   = self
         
